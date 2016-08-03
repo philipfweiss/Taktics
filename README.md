@@ -1,9 +1,5 @@
-#Rails App For Funsies
+#This is the codebase for Taktics, an online tactics website for the game Tak. 
 
-###Current Point (6/21/16): 1.3.2
-###Current Point (6/22/16): 4.2.3
-###Current Point (6/23/16): 6.2
-###Current Point (6/24/16): 8.1
-###Current Point (6/29/16): 11
+##The website is currently under development. 
 
-Hosted At: https://powerful-thicket-62841.herokuapp.com/
+#### Taktics is written and maintained by Philip Weiss, although it is based on Craig Laparo's Ptn-ninja engine.
