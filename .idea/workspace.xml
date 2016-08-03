@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2003451a-ed45-494d-a0c8-236c780bc946" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/pattern.svg" afterPath="$PROJECT_DIR$/app/assets/images/pattern.svg" />
     </list>
     <ignored path="rt_sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,21 +27,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3649635">
-              <caret line="10" column="141" selection-start-line="10" selection-start-column="141" selection-end-line="10" selection-end-column="141" />
+            <state vertical-scroll-proportion="-7.0588236">
+              <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pattern.svg" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pattern.svg" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/assets/images/pattern.svg">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="1000" selection-start-line="0" selection-start-column="1000" selection-end-line="0" selection-end-column="1000" />
+            <state vertical-scroll-proportion="0.41379312">
+              <caret line="0" column="1318" selection-start-line="0" selection-start-column="1318" selection-end-line="0" selection-end-column="1318" />
               <folding />
             </state>
           </provider>
@@ -189,8 +189,8 @@
         <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/_footer.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/static_pages/home.scss" />
-        <option value="$PROJECT_DIR$/app/assets/images/pattern.svg" />
         <option value="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/images/pattern.svg" />
       </list>
     </option>
   </component>
@@ -1133,12 +1133,12 @@
       <updated>1466629761852</updated>
       <workItem from="1467400514407" duration="155000" />
       <workItem from="1469483588210" duration="204000" />
-      <workItem from="1470253349192" duration="11823000" />
+      <workItem from="1470253349192" duration="11923000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12182000" />
+    <option name="totallyTimeSpent" value="12282000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="286" y="23" width="1111" height="823" extended-state="0" />
@@ -1560,18 +1560,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/images/pattern.svg">
+    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="1000" selection-start-line="0" selection-start-column="1000" selection-end-line="0" selection-end-column="1000" />
+        <state vertical-scroll-proportion="-7.0588236">
+          <caret line="24" column="63" selection-start-line="24" selection-start-column="63" selection-end-line="24" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/images/pattern.svg">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3649635">
-          <caret line="10" column="141" selection-start-line="10" selection-start-column="141" selection-end-line="10" selection-end-column="141" />
+        <state vertical-scroll-proportion="0.41379312">
+          <caret line="0" column="1318" selection-start-line="0" selection-start-column="1318" selection-end-line="0" selection-end-column="1318" />
           <folding />
         </state>
       </provider>
