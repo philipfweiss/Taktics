@@ -1,0 +1,27 @@
+.padded-homescreen {
+  padding: 30px;
+  background-image: url("pattern.svg");
+}
+
+.header_font {
+  font-size: 40px !important;
+  line-height: 75px ;
+  text-align: center ;
+  color: #000000 !important;
+  border-bottom: 1px solid #d5d5d5;
+  padding: 30px;
+}
+
+.header_font_pink {
+  font-size: 30px !important;
+  padding: 10px;
+  line-height: 75px ;
+  text-align: center ;
+  color: #d16370 !important;
+  margin-bottom: 0px;
+}
+
+.padded_bottom {
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
