@@ -5,17 +5,51 @@
             <iframe class="rounded_5" src="http://ptn.ninja" width="800" height="576"></iframe>
         </div>
         <div class="padded-sidebar container">
-            <span class="flex padded-playinfo light_brown col-md-12">
+             <span class="flex padded-playinfo col-md-12 btn btn-success">
                 It is your turn to play
             </span>
-            <span class="flex padded-playinfo light_blue col-md-12">
-                <span>Play: <span class="rounded_and_bordered">White</span></span>
-                <span class="floated_right">Timer:
-                    <span class="rounded_and_bordered">
-                         <%= countdown Time.now + 28.hours %>
-                    </span>
+
+            <div class="col-md-12 padded-playinfo light_grey">
+                <span>
+                    Timer: 0:00
                 </span>
-            </span>
+            </div>
+
+            <div class="col-md-12 padded-playinfo white_to_play">
+                <span>White's Turn</span>
+            </div>
+
+            <hr class="col-md-11">
+
+            <div class="col-md-12 center my_rating">
+                <span>My Rating: </span> 1400
+            </div>
+
+            <div class="col-md-12 light_blue">
+                <div class="center">Post Completion Info</div>
+
+                <div>
+                    <span>Problem Rating: 1200 </span>
+
+                </div>
+                <div>
+                    <span>Problem Attempts: 23</span>
+                </div>
+                <div>
+                    <span>Average Time: 1:09 </span>
+                </div>
+
+                <div>
+                    <span>Pass Rate: 30%</span>
+                </div>
+                <span style="float: right;" class="btn btn-sm btn-success">
+                    Comments
+                </span>
+
+            </div>
+
+
+
         </div>
 
     </div>

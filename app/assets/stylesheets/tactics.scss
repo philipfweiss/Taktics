@@ -32,31 +32,29 @@
 }
 
 .padded-playinfo {
-  text-align: center;
   padding: 10px;
+  font-size: 15px;
   width: 100%;
   border-radius: 10px;
-  margin: 10px;
+  margin: 5px;
 }
 
-.light_blue {
-  background-color: #eaebff;
+.light_grey {
+  background-color: lavender;
 }
 
-.light_brown {
-  background-color: #eae6eb;
-  font-size: 16px;
-  text-align: center;
+.white_to_play {
+  border: 1px solid #b1b1b1;
+  background-color: white;
 
 }
-
 
 .floated_right {
-  padding-left: 30px;
+  padding-left: 100px;
 }
 
 .rounded_and_bordered {
-  border: 1px solid #bbbbbb;
+  border: 1px solid black;
   border-radius: 5px;
   padding: 4px;
 }
@@ -67,4 +65,22 @@
 
 .rounded_5 {
   border-radius: 5px;
+}
+
+.light_blue {
+  border-radius: 10px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #d4f8ff;
+}
+
+.light_blue div {
+  padding: 5px;
+}
+
+.my_rating {
+  background-color: #e3bb97;
+  border-radius: 10px;
+  padding: 5px;
+
 }
