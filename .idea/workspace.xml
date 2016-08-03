@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2003451a-ed45-494d-a0c8-236c780bc946" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" afterPath="$PROJECT_DIR$/app/views/static_pages/home.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/static_pages/home.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/static_pages/home.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/images/pattern.svg" afterPath="$PROJECT_DIR$/app/assets/images/pattern.svg" />
     </list>
     <ignored path="rt_sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,8 +30,8 @@
       <file leaf-file-name="home.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7347932">
-              <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+            <state vertical-scroll-proportion="0.3649635">
+              <caret line="10" column="141" selection-start-line="10" selection-start-column="141" selection-end-line="10" selection-end-column="141" />
               <folding />
             </state>
           </provider>
@@ -1135,12 +1133,12 @@
       <updated>1466629761852</updated>
       <workItem from="1467400514407" duration="155000" />
       <workItem from="1469483588210" duration="204000" />
-      <workItem from="1470253349192" duration="11763000" />
+      <workItem from="1470253349192" duration="11823000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12122000" />
+    <option name="totallyTimeSpent" value="12182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="286" y="23" width="1111" height="823" extended-state="0" />
@@ -1572,8 +1570,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static_pages/home.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7347932">
-          <caret line="27" column="70" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.3649635">
+          <caret line="10" column="141" selection-start-line="10" selection-start-column="141" selection-end-line="10" selection-end-column="141" />
           <folding />
         </state>
       </provider>
