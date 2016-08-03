@@ -1,7 +1,8 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
   <div class="container">
-    <%= link_to "Application Base", root_path, id: "logo" %>
-    <nav>
+      <%= link_to image_tag("logo.png", :size => '28x28') + " Taktics", root_path, id: "logo" %>
+
+      <nav>
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Help", help_path %></li>

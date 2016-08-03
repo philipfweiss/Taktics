@@ -25,6 +25,11 @@ $gray-medium-light: #eaeaea;
 
 body {
  padding-top: 60px;
+  background-color: black;
+}
+
+.navbar {
+  background-color: white !important;
 }
 
 section {
@@ -77,8 +82,7 @@ p {
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
+  color: black;
   letter-spacing: -1px;
   padding-top: 9px;
   font-weight: bold;
