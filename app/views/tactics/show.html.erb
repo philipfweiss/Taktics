@@ -1,14 +1,20 @@
 
-<div class="container main_background">
-    <h1 class="header_font">Welcome, Taktician</h1>
+<div class="container main_background padded_10" style="min-width: 1100px">
     <div class="flex minwidth">
         <div>
-            <iframe src="http://ptn.ninja" width="800" height="576"></iframe>
+            <iframe class="rounded_5" src="http://ptn.ninja" width="800" height="576"></iframe>
         </div>
-        <div class="padded-sidebar">
-            <span class="padded-playinfo">
-                <span>Play: White</span>
-                <span>Play: White</span>
+        <div class="padded-sidebar container">
+            <span class="flex padded-playinfo light_brown col-md-12">
+                It is your turn to play
+            </span>
+            <span class="flex padded-playinfo light_blue col-md-12">
+                <span>Play: <span class="rounded_and_bordered">White</span></span>
+                <span class="floated_right">Timer:
+                    <span class="rounded_and_bordered">
+                         <%= countdown Time.now + 28.hours %>
+                    </span>
+                </span>
             </span>
         </div>
 

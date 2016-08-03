@@ -28,8 +28,43 @@
 
 .padded-sidebar {
   padding: 20px;
+  min-width: 200px;
 }
 
 .padded-playinfo {
-  background-color: green !important;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.light_blue {
+  background-color: #eaebff;
+}
+
+.light_brown {
+  background-color: #eae6eb;
+  font-size: 16px;
+  text-align: center;
+
+}
+
+
+.floated_right {
+  padding-left: 30px;
+}
+
+.rounded_and_bordered {
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.padded_10 {
+  padding: 10px;
+}
+
+.rounded_5 {
+  border-radius: 5px;
 }
