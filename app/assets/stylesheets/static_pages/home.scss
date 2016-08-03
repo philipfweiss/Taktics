@@ -1,6 +1,9 @@
 .padded-homescreen {
   padding: 30px;
-  background-image: url("pattern.svg");
+}
+
+.padded {
+  padding: 20px;
 }
 
 .header_font {
@@ -10,6 +13,10 @@
   color: #000000 !important;
   border-bottom: 1px solid #d5d5d5;
   padding: 30px;
+}
+
+.jumbotron {
+  border: 1px solid black;
 }
 
 .header_font_pink {
