@@ -222,6 +222,8 @@ DEPENDENCIES
   puma
   rails
   rails_12factor
+  rails_serve_static_assets
+  rails_stdout_logging
   sass-rails
   sdoc (= 0.4.0)
   spring
