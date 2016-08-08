@@ -1,0 +1,376 @@
+
+// PTN Ninja by Craig Laparo is licensed under a Creative Commons
+// Attribution-NonCommercial-ShareAlike 4.0 International License.
+// http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+$stone-thickness: 0.3vmin;
+
+#viewer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  transition: opacity $time-smooth $natural;
+}
+
+.board {
+  $top-margin: 10vmin;
+
+  position: absolute;
+  top: calc(50% - #{50vmin - $top-margin} + #{($edge*3 + $button-height) / 2});
+  right: calc(#{$edge}*2 + #{$fab-height});
+  width: calc(#{100vmin - $top-margin} - #{$edge*3 + $button-height});
+  height: calc(#{100vmin - $top-margin} - #{$edge*3 + $button-height});
+  font-size: 3vmin;
+  background-color: $primary-color-500;
+
+  #viewer.animated & {
+    transition: all $time-smooth $natural;
+  }
+
+  html.playmode & {
+    top: calc(#{$edge} + 50% - #{50vmin - $top-margin} + 0.5em);
+  }
+  html.playmode:not(.ptn) & {
+    right: calc(1em + 50% - #{50vmin - $top-margin/2} + #{($edge*3 + $button-height) / 2});
+    z-index: 1;
+  }
+
+  @media (max-aspect-ratio: $aspect-centered) {
+    right: calc(1em + 50% - #{50vmin - $top-margin/2} + #{($edge*3 + $button-height) / 2});
+  }
+
+  @media (max-aspect-ratio: $aspect-compact) {
+    top: calc(50% - #{50vmin - $top-margin/2}) !important;
+    right: $edge !important;
+    width: calc(100vmin - #{$edge});
+    height: calc(100vmin - #{$edge});
+  }
+
+  .squares,
+  .pieces {
+    position: absolute;
+    top: 0;
+    bottom: 2em;
+    left: 2em;
+    right: 0;
+  }
+
+  .squares {
+    background-color: darken($primary-color-300, 1.5%);
+  }
+
+  .square {
+    position: absolute;
+
+    &.light {
+      background-color: $primary-color-300;
+    }
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      pointer-events: none;
+      background-color: $accent-color;
+      transition: opacity $time-smooth $natural;
+    }
+    html.editmode &.active:before {
+      opacity: 0.65;
+    }
+
+    .road {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0.25;
+      transition: opacity $time-smooth $natural;
+
+      > div {
+        opacity: 0;
+        position: absolute;
+        transition: all $time-smooth $natural;
+        top: 35%;
+        bottom: 35%;
+        left: 35%;
+        right: 35%;
+      }
+
+      .up { top: 0; }
+      .down { bottom: 0; }
+      .left { left: 0; }
+      .right { right: 0; }
+    }
+
+    &.up .road .up,
+    &.down .road .down,
+    &.left .road .left,
+    &.right .road .right { opacity: 1; }
+
+    &.p1 .road > div { background-color: $primary-color-100 }
+    &.p2 .road > div { background-color: $primary-color-700 }
+  }
+
+  .piece {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: transform $time-smooth $natural;
+
+    .wrapper {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      transition: transform $time-smooth $natural,
+        opacity $time-smooth $natural;
+    }
+
+    &.placing .wrapper {
+      opacity: 0;
+      transform: scale(2);
+    }
+
+    .stone, .captive {
+      @media (max-width: $mobile) {
+        border-style: solid;
+        border-width: 0 0 $stone-thickness;
+      }
+      @media (min-width: $desktop) {
+        box-shadow: $shadow1;
+      }
+
+      &.p1 {
+        background-color: $primary-color-100;
+        border-color: $primary-color-600;
+      }
+      &.p2 {
+        background-color: $primary-color-600;
+        border-color: $primary-color-900;
+      }
+    }
+
+    &.immovable {
+      .stone { opacity: 0; }
+      .captive { opacity: 1; }
+    }
+
+    &:not(.played) .stone {
+      @media (max-width: $mobile) {
+        border-width: 1px 1px $stone-thickness;
+      }
+    }
+
+    .stone {
+      width: 50%;
+      height: 50%;
+      margin: 25%;
+      border-radius: 10%;
+      position: relative;
+      transition: all $time-smooth $natural;
+
+      &.S {
+        width: 18.75%;
+        border-radius: 27%/10%;
+        margin-left: 40.625%;
+
+        &.p1 {
+          background-color: $primary-color-50;
+          transform: rotate(-45deg);
+          @media (max-width: $mobile) {
+            border-width: 0 0 $stone-thickness $stone-thickness;
+          }
+          @media (min-width: $desktop) {
+            box-shadow: -1px 1px 2px 0 rgba(0,0,0,0.14), -1px 1px 5px 0 rgba(0,0,0,0.12), -1px 1px 1px -2px rgba(0,0,0,0.4);
+          }
+        }
+        &.p2 {
+          background-color: $primary-color-700;
+          transform: rotate(45deg);
+          @media (max-width: $mobile) {
+            border-width: 0 $stone-thickness $stone-thickness 0;
+          }
+          @media (min-width: $desktop) {
+            box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.14), 1px 1px 5px 0 rgba(0,0,0,0.12), 1px 1px 1px -2px rgba(0,0,0,0.4);
+          }
+        }
+      }
+
+      &.C {
+        border-radius: 50%;
+        transform: scale(1.1);
+
+        &.p1 {
+          background-color: $primary-color-50;
+        }
+        &.p2 {
+          background-color: $primary-color-700;
+        }
+      }
+    }
+
+    .captive {
+      position: absolute;
+      bottom: 25%;
+      right: 5%;
+      width: 15%;
+      height: 7.5%;
+      opacity: 0;
+      border-radius: 15%/30%;
+      transform: translateX(-100%);
+      transition: all $time-smooth $natural;
+    }
+  }
+
+  .scores {
+    position: absolute;
+    top: -$top-margin;
+    left: 2em;
+    right: 0;
+    display: flex;
+
+    > .player1,> .player2 {
+      display: flex;
+      width: 50%;
+      border-radius: $stone-thickness;
+      font-size: $top-margin/4;
+      line-height: normal;
+    }
+
+    .name, .score {
+      padding: 0 0.25em;
+    }
+
+    .score {
+      width: 1.25em;
+      @include unselectable;
+    }
+
+    .name {
+      flex-grow: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .ptn, .score {
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+
+    .ptn {
+      .space {
+        display: none;
+      }
+
+      .ply {
+        text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        padding: 0 0.2em;
+
+        &.player1 {
+          background: $primary-color-300;
+        }
+        &.player2 {
+          background: $primary-color-800;
+        }
+      }
+
+      &.active {
+        .ply {
+          &.player1 {
+            box-shadow: 0 0 0 0.15em $primary-color-50;
+          }
+          &.player2 {
+            box-shadow: 0 0 0 0.15em $primary-color-900;
+          }
+        }
+      }
+    }
+
+    > .player1 {
+      background-color: $primary-color-100;
+      color: $primary-color-700;
+
+      .score {
+        text-align: right;
+      }
+    }
+
+    > .player2 {
+      background-color: $primary-color-700;
+      color: $primary-color-100;
+
+      .name {
+        text-align: right;
+      }
+    }
+
+    @media (max-aspect-ratio: $aspect-compact) {
+      top: -#{$top-margin + 3};
+
+      .name, .score {
+        font-size: $top-margin/3;
+      }
+    }
+  }
+
+  .labels {
+    color: $primary-color-100;
+    position: absolute;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-around;
+    transition: color $time-smooth $natural;
+    @include unselectable;
+
+    html.editmode & {
+      color: $primary-color-200;
+    }
+
+    &.row {
+      top: 0;
+      left: 0;
+      flex-direction: column-reverse;
+      width: 2em;
+      height: calc(100% - 2em);
+      text-align: center;
+    }
+    &.col {
+      bottom: 0;
+      right: 0;
+      flex-direction: row;
+      width: calc(100% - 2em);
+      height: 2em;
+      line-height: 2em;
+    }
+  }
+}
+
+@for $size from 3 through 9 {
+  .size-#{$size} .square,
+  .size-#{$size} .piece {
+    width: percentage(1/$size);
+    height: percentage(1/$size);
+  }
+
+  @for $col from 0 through $size - 1 {
+    .size-#{$size} .c#{$col} {
+      left: percentage($col/$size);
+    }
+  }
+  @for $row from 0 through $size - 1 {
+    .size-#{$size} .r#{$row} {
+      bottom: percentage($row/$size);
+    }
+  }
+}
