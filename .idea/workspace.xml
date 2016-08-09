@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2003451a-ed45-494d-a0c8-236c780bc946" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2003451a-ed45-494d-a0c8-236c780bc946" name="Default" comment="" />
     <ignored path="rt_sample_app.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -40,7 +38,7 @@
       <file leaf-file-name="show.html.erb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tactics/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.13729978">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="396" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="396" />
               <folding />
             </state>
@@ -209,7 +207,7 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="243" />
+    <option name="x" value="217" />
     <option name="y" value="23" />
     <option name="width" value="1111" />
     <option name="height" value="822" />
@@ -237,9 +235,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="RailsProjectView" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -456,7 +453,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="RailsProjectView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1114,14 +1112,15 @@
       <workItem from="1470331350860" duration="1828000" />
       <workItem from="1470518615490" duration="181000" />
       <workItem from="1470695260832" duration="10000" />
+      <workItem from="1470702731201" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15233000" />
+    <option name="totallyTimeSpent" value="15236000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="243" y="23" width="1111" height="822" extended-state="0" />
+    <frame x="217" y="23" width="1111" height="822" extended-state="0" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1530,7 +1529,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tactics/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13729978">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="396" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="396" />
           <folding />
         </state>

@@ -1,0 +1,115 @@
+
+// PTN Ninja by Craig Laparo is licensed under a Creative Commons
+// Attribution-NonCommercial-ShareAlike 4.0 International License.
+// http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+#messages {
+  > div {
+    position: absolute;
+    top: -0.5em;
+    left: $button-height;
+    padding: $edge;
+    overflow: auto;
+    max-height: 100%;
+    max-width: calc(100% - #{$edge + $fab-height});
+    box-sizing: border-box;
+    transition: all $time-smooth $natural;
+    z-index: 1;
+
+    &:not(.visible),
+    html.playmode &.messages-parse,
+    html.editmode &.messages-board {
+      opacity: 0;
+      transform: translateX(-100%);
+      pointer-events: none;
+    }
+  }
+
+  .message {
+    float: left;
+    clear: left;
+    position: relative;
+    white-space: nowrap;
+    border-radius: 2px;
+    margin-top: 0.5em;
+    margin-right: $edge;
+    max-width: 100%;
+    box-shadow: $shadow1;
+    transition: all $time-smooth $natural;
+
+    &.animating {
+      opacity: 0;
+      margin-top: calc(-1.22em - 2rem);
+    }
+
+    .content {
+      margin: 1rem calc(#{$edge*2} + 1.5rem);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    i {
+      position: absolute;
+      padding: $edge*2/3 $edge;
+      left: 0;
+      top: 0;
+      font-size: 1.5em;
+
+      &.icon-x {
+        opacity: 0.5;
+        left: auto;
+        right: 0;
+        cursor: default;
+        transition: opacity $time-smooth $natural;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.success {
+      background-color: $success-color;
+      color: $success-text-color;
+    }
+
+    &.warning {
+      background-color: $warning-color;
+      color: $warning-text-color;
+    }
+
+    &.error {
+      background-color: $error-color;
+      color: $error-text-color;
+
+      b {
+        border-bottom: 2px solid $error-text-color;
+      }
+    }
+
+    &.help {
+      background-color: $help-color;
+      color: $help-text-color;
+    }
+
+    &.info {
+      background-color: $info-color;
+      color: $info-text-color;
+    }
+
+    &.comment {
+      background-color: $accent-color;
+      color: $primary-color-text;
+    }
+
+    &.player1 {
+      background-color: $primary-color-50;
+      color: $primary-color-700;
+    }
+
+    &.player2 {
+      background-color: $primary-color-700;
+      color: $primary-color-50;
+    }
+  }
+}

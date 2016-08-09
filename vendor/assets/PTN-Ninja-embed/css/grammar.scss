@@ -1,0 +1,169 @@
+
+// PTN Ninja by Craig Laparo is licensed under a Creative Commons
+// Attribution-NonCommercial-ShareAlike 4.0 International License.
+// http://creativecommons.org/licenses/by-nc-sa/4.0/
+
+$red: #EF5350;
+$orange: #FF9800;
+$yellow: #FFCA28;
+$green: #8BC34A;
+$blue: #81D4FA;
+$purple: #BA68C8;
+
+.ptn {
+  .player1, .player2 {
+    border-radius: 0.2em;
+  }
+
+  .tag {
+    color: $primary-color-900;
+    font-weight: 300;
+
+    i {
+      color: $primary-color-50;
+      margin-right: 0.2em;
+      font-size: 1em;
+      line-height: 1.5em;
+      vertical-align: middle;
+    }
+
+    .name {
+      color: $primary-color-50;
+      font-weight: 300;
+      vertical-align: middle;
+    }
+
+    .value {
+      color: $primary-color-50;
+      font-weight: 600;
+    }
+  }
+
+  .tps {
+    color: $primary-color-100;
+    font-weight: 300;
+
+    .separator {
+      color: $primary-color-900;
+    }
+
+    .space {
+      color: $primary-color-300;
+      font-weight: normal;
+    }
+
+    .stack, .player, .move {
+      color: $primary-color-50;
+    }
+
+    .piece {
+      border-radius: 0;
+
+      &.player1 {
+        box-shadow: none !important;
+      }
+      &.player2 {
+        box-shadow: none !important;
+      }
+
+      &:first-child {
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+      }
+      &:last-child {
+        border-top-right-radius: 0.2em;
+        border-bottom-right-radius: 0.2em;
+      }
+    }
+  }
+
+  .comment {
+    color: $primary-color-900;
+    font-weight: 300;
+
+    .text {
+      color: $primary-color-50;
+      font-weight: 400;
+    }
+  }
+
+  .linenum {
+    color: $primary-color-900;
+    font-weight: 400
+  }
+
+  .ply {
+    font-weight: 700;
+
+    .stone {
+      color: $white;
+    }
+    .column {
+      color: $yellow;
+      font-weight: 600;
+    }
+    .row {
+      color: $orange;
+      font-weight: 600;
+    }
+    .count_text {
+      color: $green;
+      font-weight: 300;
+    }
+    .direction {
+      color: $primary-color-50;
+    }
+    .drops {
+      color: $blue;
+      font-weight: 300;
+    }
+    .evaluation {
+      color: $whitish;
+      font-weight: 300;
+    }
+
+    &.nop {
+      color: $primary-color-300;
+      font-weight: normal;
+    }
+  }
+
+  .result {
+    font-weight: 700;
+
+    .win {
+      color: $primary-color-50;
+
+      &.road {
+        color: $green;
+      }
+      &.flat {
+        color: $blue;
+      }
+    }
+    .loss {
+      color: $red;
+    }
+    .draw {
+      color: $yellow;
+    }
+  }
+
+  .invalid, .invalid * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: $primary-color-100;
+    font-weight: 300;
+
+    .first-letter {
+      color: $error-color;
+      font-weight: 600;
+    }
+  }
+
+  .illegal, .illegal * {
+    background: transparent !important;
+    box-shadow: none !important;
+    color: $error-color !important;
+  }
+}
