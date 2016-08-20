@@ -46,6 +46,7 @@ class User < ActiveRecord::Base
 
     def init
       self.finished_tutorial = false
+      self.rating = 1200
     end
 
     def downcase_email

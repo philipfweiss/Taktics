@@ -2,15 +2,17 @@
     <%= render 'shared/not_logged_in' %>
 <% end %>
 
-<% if logged_in? && @user.finished_tutorial%>
-
+<% if logged_in? && !@user.finished_tutorial%>
+    <%= render 'shared/logged_in_tutorial' %>
 <% end %>
+
 <div class="container main_background padded_10" style="min-width: 1100px">
     <div class="flex container minwidth">
         <div class="col-md-9">
             <iframe class="rounded_5" src="https://ptn.ninja/#NoZQlgLgpgBARABQDYEMCeAVFBrAdAYwHsBbOAXQChgBRANygDsJ4B5BpMB2ZdcqgERTR4AJgAMARgBsuMQHZcIkX2AYwxWHGkAuAMwTtAVgCcKnmigAnCfADiVy1GxnUFyyPjhixQgxUAlKABnAFckZjh-AFoxFXAAL00pPgoKCVwYFBsAMwkKEQyAE10YfF0KXSKAFlKqiiqiwxhCkQpDDKgSqFaZGGyPbPKFGCgbKDqADiKpZpEAagpjDIBhFtqAPjSxIvm+uol0mBFiuZH5tILZ0t1NiUqYXUKqqJGqgB40hpgqk6POj4k7RghieL2WKCkaV6-Q+QA" width="750" height="576"></iframe>
         </div>
-        <div class="padded-sidebar center container col-md-4">
+
+        <div class="padded-sidebar center container col-md-4" style="background-color: #455A64; border-radius: 5px;">
             <span class="flex padded-playinfo col-md-12 btn btn-success">
                 It is your turn to play
             </span>
@@ -28,7 +30,10 @@
             <hr class="col-md-11">
 
             <div class="col-md-12 center my_rating">
-                <span>My Rating: </span> 1400
+                <span>My Rating: </span>
+                <% if logged_in? %>
+                    <%= @user.rating %>
+                <% end %>
             </div>
 
             <div class="col-md-12 light_blue">

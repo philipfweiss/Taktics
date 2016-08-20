@@ -1,0 +1,38 @@
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Welcome to Taktics!</h4>
+            </div>
+            <div class="modal-body">
+                <p>To answer a taktic, analyze the position given to you on the board and select
+                    the correct move out of the choices presented. If you choose correctly,
+                    you will be awarded rating points based on your rating, the rating of the problem,
+                    and a number of other factors.
+                </p>
+                <p>
+                    The timer will not effect your rating, but the data
+                    will be recorded to help you visualize your progression.
+                </p>
+                <p> If you answer a taktic incorrectly, you will losing rating points and the rating of the problem
+                will increase.
+                </p>
+                <p>-The Taktics Team </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('#myModal').modal('show');
+    })
+</script>

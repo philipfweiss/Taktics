@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160820010337) do
+ActiveRecord::Schema.define(version: 20160820021238) do
 
   create_table "tactics", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20160820010337) do
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
     t.boolean  "finished_tutorial"
+    t.integer  "rating"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
