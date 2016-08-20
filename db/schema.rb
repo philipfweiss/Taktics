@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160803203646) do
+ActiveRecord::Schema.define(version: 20160820010337) do
 
   create_table "tactics", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20160803203646) do
     t.string   "activation_digest"
     t.boolean  "activated",         default: false
     t.datetime "activated_at"
+    t.boolean  "finished_tutorial"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
