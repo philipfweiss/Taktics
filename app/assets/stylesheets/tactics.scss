@@ -22,6 +22,7 @@
 .padded-sidebar {
   padding: 20px;
   min-width: 200px;
+  float: right;
 }
 
 .padded-playinfo {
@@ -75,5 +76,14 @@
   background-color: #e3bb97;
   border-radius: 10px;
   padding: 5px;
+}
 
+.move_choices {
+  margin: 10px;
+  background-color: white;
+  border: 1px solid black;
+}
+
+.select_a_move {
+  color: white;
 }

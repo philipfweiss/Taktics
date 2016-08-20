@@ -9,7 +9,7 @@
 <div class="container main_background padded_10" style="min-width: 1100px">
     <div class="flex container minwidth">
         <div class="col-md-9">
-            <iframe class="rounded_5" src="https://ptn.ninja/#NoZQlgLgpgBARABQDYEMCeAVFBrAdAYwHsBbOAXQChgBRANygDsJ4B5BpMB2ZdcqgERTR4AJgAMARgBsuMQHZcIkX2AYwxWHGkAuAMwTtAVgCcKnmigAnCfADiVy1GxnUFyyPjhixQgxUAlKABnAFckZjh-AFoxFXAAL00pPgoKCVwYFBsAMwkKEQyAE10YfF0KXSKAFlKqiiqiwxhCkQpDDKgSqFaZGGyPbPKFGCgbKDqADiKpZpEAagpjDIBhFtqAPjSxIvm+uol0mBFiuZH5tILZ0t1NiUqYXUKqqJGqgB40hpgqk6POj4k7RghieL2WKCkaV6-Q+QA" width="750" height="576"></iframe>
+            <iframe class="rounded_5" src=<%= @tactic.url%> width="750" height="576"></iframe>
         </div>
 
         <div class="padded-sidebar center container col-md-4" style="background-color: #455A64; border-radius: 5px;">
@@ -28,6 +28,23 @@
             </div>
 
             <hr class="col-md-11">
+            <div>
+                <span class="select_a_move">Select a move</span>
+                <div class="col-md-12 flex">
+                    <div>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:one] %> </span>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:two] %> </span>
+                    </div>
+                    <div>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:three] %> </span>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:four] %></span>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr class="col-md-11">
+
 
             <div class="col-md-12 center my_rating">
                 <span>My Rating: </span>
@@ -40,16 +57,12 @@
                 <div class="center">Post Completion Info</div>
 
                 <div>
-                    <span>Problem Rating: 1200 </span>
+                    <span>Problem Rating: <%= @tactic.rating + 1 %> </span>
 
                 </div>
                 <div>
-                    <span>Problem Attempts: 23</span>
+                    <span>Problem Attempts: <%= @tactic.attempts %></span>
                 </div>
-                <div>
-                    <span>Average Time: 1:09 </span>
-                </div>
-
                 <div>
                     <span>Pass Rate: 30%</span>
                 </div>
