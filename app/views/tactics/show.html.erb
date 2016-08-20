@@ -19,7 +19,8 @@
 
             <div class="col-md-12 padded-playinfo light_grey">
                 <span>
-                    Timer: 0:00
+                    Timer: <span id="timer"></span>
+
                 </span>
             </div>
 
@@ -50,11 +51,13 @@
                 <span>My Rating: </span>
                 <% if logged_in? %>
                     <%= @user.rating %>
+                <% else %>
+                    <%= "N/A" %>
                 <% end %>
             </div>
 
             <div class="col-md-12 light_blue">
-                <div class="center">Post Completion Info</div>
+                <div class="center" style="text-decoration: underline;">Post Completion Info</div>
 
                 <div>
                     <span>Problem Rating: <%= @tactic.rating + 1 %> </span>
@@ -76,3 +79,24 @@
     </div>
 
 </div>
+
+<script>
+    $(document).ready(function() {
+        var sec = 0;
+        var min = 0;
+        var counter = setInterval(timer, 1000);
+        function timer() {
+            sec++;
+            if(sec >= 60) {
+                min++;
+                sec = 00;
+            }
+            if(min > 20) {
+                clearInterval(counter);
+                return;
+            }
+            $('#timer').html("0" + min + ":" + (sec < 10 ? "0" : "") + sec);
+
+        }
+    })
+</script>
