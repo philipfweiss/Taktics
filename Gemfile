@@ -14,6 +14,7 @@ gem 'jbuilder'
 gem 'web-console', group: :development
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'bcrypt'
+gem 'material_icons'
 
 group :development, :test do
   gem 'sqlite3'

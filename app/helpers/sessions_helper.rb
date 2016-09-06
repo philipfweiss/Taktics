@@ -5,6 +5,7 @@ module SessionsHelper
     session[:user_id] = user.id
   end
 
+
   def log_out
     forget(current_user)
     session.delete(:user_id)
@@ -59,6 +60,18 @@ module SessionsHelper
   # Stores the URL trying to be accessed.
   def store_location
     session[:forwarding_url] = request.original_url if request.get?
+  end
+
+  def timer_on
+    session[:timer_on] = true;
+  end
+
+  def timer_off
+    session[:timer_off] = false;
+  end
+
+  def timer_status
+    session[:timer_status]
   end
 
 end

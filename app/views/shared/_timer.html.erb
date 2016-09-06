@@ -1,7 +1,13 @@
 
-<div id="page_timer">
-   Timer: 00:00
-</div>
+<% if timer_status %>
+    <div id="page_timer">
+       Timer: 00:00
+    </div>
+        <% else %>
+    <div id="no_timer">
+        No Timer
+    </div>
+<% end %>
 
 <script>
     $(document).one('ready', (function() {
