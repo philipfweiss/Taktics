@@ -1,0 +1,30 @@
+
+<div id="page_timer">
+   Timer: 00:00
+</div>
+
+<script>
+    $(document).one('ready', (function() {
+        var sec = 0;
+        var min = 0;
+        var counter = setInterval(timer, 1000);
+        function timer() {
+            sec++;
+            if(sec >= 60) {
+                min++;
+                sec = 0;
+            }
+            if(min > 100) {
+                clearInterval(counter);
+                return;
+            }
+            $('#page_timer').html("Timer: " + (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" : "") + sec);
+
+        }
+        $(window).bind('beforeunload', function() {
+            min = 0;
+            sec = 0;
+        });
+
+    }))
+</script>

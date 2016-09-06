@@ -19,8 +19,7 @@
 
             <div class="col-md-12 padded-playinfo light_grey">
                 <span>
-                    Timer: <span id="timer"></span>
-
+                    <%= render 'shared/timer'%>
                 </span>
             </div>
 
@@ -80,23 +79,3 @@
 
 </div>
 
-<script>
-    $(document).ready(function() {
-        var sec = 0;
-        var min = 0;
-        var counter = setInterval(timer, 1000);
-        function timer() {
-            sec++;
-            if(sec >= 60) {
-                min++;
-                sec = 00;
-            }
-            if(min > 20) {
-                clearInterval(counter);
-                return;
-            }
-            $('#timer').html("0" + min + ":" + (sec < 10 ? "0" : "") + sec);
-
-        }
-    })
-</script>
