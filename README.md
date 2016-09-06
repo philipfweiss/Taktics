@@ -5,3 +5,6 @@
 
 
 #### Taktics is written and maintained by Philip Weiss, although it is based on Craig Laparo's Ptn-ninja engine. 
+
+
+Edit: Added SSL!
