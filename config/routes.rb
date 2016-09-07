@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'home' => 'static_pages#home'
   get 'first_tactic' => 'tactics#show'
   post 'login' => 'sessions#create'
+  post 'toggle_timer' =>  'tactics#toggle_timer'
   delete 'logout' => 'sessions#destroy'
 
 

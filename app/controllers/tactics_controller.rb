@@ -14,4 +14,13 @@ class TacticsController < ApplicationController
 
   def index
   end
+
+  def toggle_timer
+    if timer_status
+      timer_off
+    else
+      timer_on
+    end
+  end
+
 end
