@@ -63,11 +63,11 @@ module SessionsHelper
   end
 
   def timer_on
-    session[:timer_on] = true;
+    session[:timer_status] = true;
   end
 
   def timer_off
-    session[:timer_off] = false;
+    session[:timer_status] = false;
   end
 
   def timer_status

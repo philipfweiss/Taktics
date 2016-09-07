@@ -1,16 +1,32 @@
+<div class="mytimer">
+    <% if timer_status %>
+        <span id="timer_toggle"><%= material_icon.alarm_on.md_18%></span>
+        <span id="page_timer">
+            Timer: 00:00
+        </span>
+    <% else %>
+        <div id="no_timer">
+            <span id="timer_toggle"><%= material_icon.alarm_off.md_18%></span>
+            <span>Timer Off</span>
 
-<% if timer_status %>
-    <div id="page_timer">
-       Timer: 00:00
-    </div>
-        <% else %>
-    <div id="no_timer">
-        No Timer
-    </div>
-<% end %>
+        </div>
+    <% end %>
+</div>
 
 <script>
     $(document).one('ready', (function() {
+        $('#timer_toggle').on('click', function() {
+            <% if timer_status %>
+                <% timer_off %>
+            alert('Timer will be turned off for the next problem');
+
+            <% else %>
+                <% timer_on%>
+            alert('Timer will be turned on for the next problem');
+
+            <% end %>
+        });
+
         var sec = 0;
         var min = 0;
         var counter = setInterval(timer, 1000);
