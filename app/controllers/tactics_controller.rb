@@ -1,8 +1,9 @@
 class TacticsController < ApplicationController
   def show
     @user = current_user
-    @tactic = Tactic.find(1)
-    @moves = @tactic.options
+    @tactic = Tactic.find(2)
+    @moves = @tactic.options || {}
+
     @moves[:one] ||= "Nothing!"
     @moves[:two] ||= "Nothing!"
     @moves[:three] ||= "Nothing!"
