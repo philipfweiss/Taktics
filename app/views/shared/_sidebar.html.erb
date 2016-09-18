@@ -1,0 +1,35 @@
+<div class="wrapper">
+    <div class="sidebar" style="border-left: 1px solid grey;">
+        <div class="title">
+            Taktics
+        </div>
+        <ul class="nav">
+            <% if logged_in? %>
+                <li><%= link_to "Profile", current_user %></li>
+                <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+                <li><%= link_to "View Users", index_path%></li>
+                <li class="divider"></li>
+                <li style="border-bottom: 2px solid grey;" >
+                    <%= link_to "Log out", logout_path, method: "delete" %>
+                </li>
+            <% else %>
+
+                <li class="divider"></li>
+                <li><%= link_to "Sign_up", signup_path %></li>
+                <li class="divider"></li>
+                <li style="border-bottom: 2px solid grey;" ><%= link_to "Log in", login_path %></li>
+            <% end %>
+            <li>
+                <a href="/tactics/1">Taks and Tinües <sup style="font-size: 8px;">Alpha</sup></a>
+            </li>
+            <li>
+                <a href="/tactics/1">Taktics <sup style="font-size: 8px;">Coming Soon</sup></a></a>
+            </li>
+            <li>
+                <a class=>Settings</a>
+            </li>
+            <li>
+                <a>Statistics</a>
+            </li>
+
+    </div>

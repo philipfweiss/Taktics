@@ -1,0 +1,47 @@
+<div class="wrapper">
+    <div class="sidebar">
+        <div class="title">
+            Sidebar
+        </div>
+        <ul class="nav">
+            <li>
+                <a>Dashboard</a>
+            </li>
+            <li>
+                <a>Statistics</a>
+            </li>
+            <li>
+                <a class="active">Milestones</a>
+            </li>
+            <li>
+                <a>Experiments</a>
+            </li>
+            <li>
+                <a>Previews</a>
+            </li>
+            <li>
+                <a>Assets</a>
+            </li>
+            <li>
+                <a>Settings</a>
+            </li>
+            <li>
+                <a>Logout</a>
+            </li>
+        </ul>
+    </div>
+    <div class="content isOpen">
+        <div>
+            <a class="button"></a>
+        </div>
+        <%= render 'shared/timer'%>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $('.button').on('click', function() {
+            $('.content').toggleClass('isOpen');
+        });
+    });
+</script>

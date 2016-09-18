@@ -12,14 +12,29 @@
 
 </head>
 <body>
-    <%= render 'layouts/header' %>
     <div class="container">
           <% flash.each do |message_type, message| %>
               <div class="alert alert-<%= message_type %>"><%= message %></div>
           <% end %>
-          <%= yield %>
+            <%= render 'shared/sidebar' %>
+            <div class="content isOpen" style="height: 100%;">
+                <div style="margin-top: -10px; margin-bottom: 20px;">
+                    <a class="button"></a>
+                </div>
+                <%= yield %>
+            </div>
+        </div>
           <%= render 'layouts/footer' %>
     </div>
 
+    <script>
+        $(document).ready(function() {
+            $('.button').on('click', function() {
+                $('.content').toggleClass('isOpen');
+            });
+        });
+    </script>
+
 </body>
 </html>
+
