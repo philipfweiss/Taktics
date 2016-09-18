@@ -32,6 +32,15 @@ body {
   background-color: white !important;
 }
 
+.navbar-right li:hover {
+  background-color: #a6a6a6 !important;
+}
+
+.navbar-right:active {
+  background-color: #a6a6a6 !important;
+}
+
+
 section {
   overflow: auto;
 }
