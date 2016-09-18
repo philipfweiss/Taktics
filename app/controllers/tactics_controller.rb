@@ -9,6 +9,7 @@ class TacticsController < ApplicationController
     @moves[:three] ||= "Nothing!"
     @moves[:four] ||= "Nothing!"
     @moves[:correct] ||= "Nothing!"
+    gon.correct = @moves[:correct]
 
   end
 
