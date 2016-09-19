@@ -3,7 +3,7 @@
 <div class="container main_background padded_10" style="min-width: 1100px">
     <div class="flex container minwidth">
         <div class="col-md-9">
-            <iframe class="rounded_5" src=<%= @tactic.url%> width="750" height="576"></iframe>
+            <iframe class="rounded_5" src=<%= @tactic.url%> width="700" height="576"></iframe>
         </div>
 
         <div class="padded-sidebar center container col-md-4" style="background-color: #455A64; border-radius: 5px; max-width: 400px;">
@@ -26,12 +26,12 @@
                 <span class="select_a_move">Select a move</span>
                 <div class="col-md-12 flex">
                     <div>
-                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:one] %> </span>
-                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:two] %> </span>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= "a1"  %> </span>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= "d2"  %> </span>
                     </div>
                     <div>
-                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:three] %> </span>
-                        <span class="move_choices btn btn-md btn-secondary"> <%= @moves[:four] %></span>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= "e5" %> </span>
+                        <span class="move_choices btn btn-md btn-secondary"> <%= "f4" %></span>
                     </div>
 
                 </div>
