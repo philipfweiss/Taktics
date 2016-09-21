@@ -106,6 +106,19 @@ body {
 .nav li:nth-child(8) a:before { content: '\f080';}
 .nav li:nth-child(9) a:before { content: '\f128';}
 
+a {
+  color: #a73c41;
+}
+
+a:hover {
+  color: #a73c41;
+
+}
+
+.white-small {
+  color: white;
+  font-size: 12px;
+}
 
 .nav li a:hover {
   background: #444;
