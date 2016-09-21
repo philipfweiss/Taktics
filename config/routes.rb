@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   delete 'logout' => 'sessions#destroy'
 
 
-  root 'tactics#show'
+  root 'static_pages#home'
   resources :users
   resources :tactics
   resources :account_activations, only: [:edit]

@@ -100,10 +100,12 @@ body {
 
 .nav li:nth-child(3) a:before { content: '\f0e8';}
 .nav li:nth-child(4) a:before { content: '\f023';}
-.nav li:nth-child(5) a:before { content: '\f1db';}
-.nav li:nth-child(6) a:before { content: '\f06e';}
-.nav li:nth-child(7) a:before { content: '\f085';}
-.nav li:nth-child(8) a:before { content: '\f012'; left: 23px; }
+.nav li:nth-child(5) a:before { content: '\f015';}
+.nav li:nth-child(6) a:before { content: '\f1db';}
+.nav li:nth-child(7) a:before { content: '\f06e';}
+.nav li:nth-child(8) a:before { content: '\f080';}
+.nav li:nth-child(9) a:before { content: '\f128';}
+
 
 .nav li a:hover {
   background: #444;

@@ -1,21 +1,15 @@
 <% provide(:title, 'Home') %>
 
 
-<div class="container main_background">
-    <h1 class="header_font jumbotron">
-        <%= image_tag("logo.png", :size => '48x48') %>
-        Taktics
-    </h1>
+<div class="container main_background padded_10" style="min-width: 1200px">
+    <h1> Welcome to Taktics! </h1>
 
-    <div class="center col-md-6 container padded-homescreen">
-        <div>
-            <%= link_to "Click here to try a Taktic", "tactics/show", class: "btn btn-info btn-lg bordered", style: "border: 1px solid black;"%>
-        </div>
+    <div class="col-md-6">
+
     </div>
 
-
-    <div class="col-md-6 padded_bottom">
-        <div class="jumbotron home_jumbo">
+    <div class="col-md-6">
+        <div>
             <h3 class="header_font_pink">What is Tak?</h3>
             <ul>
                 <li>Tak is a strategy game created by James Ernest and Patrick Rothfuss.</li>
@@ -33,4 +27,5 @@
 
         </div>
     </div>
+
 </div>
